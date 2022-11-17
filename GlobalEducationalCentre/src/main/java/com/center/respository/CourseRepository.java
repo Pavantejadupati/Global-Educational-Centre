@@ -8,6 +8,5 @@ import com.center.entity.Course;
 @Repository
 public interface CourseRepository extends JpaRepository<Course, Long>{
 
-	
 
 }

@@ -12,11 +12,15 @@
 table, td {
 	text-align: center;
 }
+
+ span{
+ 	color: red;
+ }
 </style>
 </head>
 <body>
 	<div align="center">
-		<h1>Add New Course</h1>
+		<h1><span>Add New Course</span></h1>
 
 		<hr>
 		<h3>
@@ -27,8 +31,8 @@ table, td {
 			<tr>
 				<th>COURSEID</th>
 				<th>COURSENAME</th>
-				<th>DURATION(Months)</th>
 				<th>FEES</th>
+				<th>DURATION(Months)</th>
 				<th>ACTIONS</th>
 
 			</tr>
@@ -36,11 +40,10 @@ table, td {
 			<tr>
 				<td>${course.courseId}</td>
 				<td>${course.courseName}</td>
-				<td>${course.duration}</td>
 				<td>${course.fees}</td>
-				<td><a href="/edit=${course.courseId}"
-					class="btn btn-sm btn-danger">Edit</a> &nbsp; &nbsp; <a
-					href="/delete=${course.courseId}" class="btn btn-sm btn-danger">Delete</a></td>
+				<td>${course.duration}</td>
+				<td><a href="/edit?courseId=${course.courseId}">Edit</a> &nbsp; &nbsp; <a
+					   href="/delete?courseId=${course.courseId}">Delete</a></td>
 			</tr>
 			</c:forEach>
 		</table>

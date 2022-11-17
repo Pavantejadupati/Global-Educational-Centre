@@ -6,51 +6,47 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>ADD NEW COURSE</title>
-
+<title>UPDATE COURSE</title>
 <style type="text/css">
 span {
 	color: red;
 }
 </style>
-
 </head>
 <body>
 	<div align="center">
-		<h1 style="color:gold">Add New Course</h1>
+		<h1 style="color: gold">Edit Course Fees And Duration</h1>
 
 		<h3><span>* marked items enter is compulsory</span></h3>
-
-		<form:form action="/save?action=new" method="post" modelAttribute="courses">
-
+		
+		<form:form action="/save?action=edit" method="post" modelAttribute="courses">
+		
 			<table border="0">
 
 				<tr>
-					<td><span>*</span> Enter course number :</td>
-					<td><form:input path="courseId" value="${courses.courseId}"/></td>
-					<td><form:errors path="courseId"/></td>
+					<td> Enter course number :</td>
+					<td><form:input path="courseId" readonly="true" value = "${courses.courseId}"/></td>
 				</tr>
 
 				<tr>
-					<td><span>*</span> Enter Course Name :</td>
-					<td><form:input path="courseName" /></td>
-					<td><form:errors path="courseName"/></td>
+					<td> Enter Course Name :</td>
+					<td><form:input path="courseName" readonly="true" value = "${courses.courseName}" /></td>
 				</tr>
 
 				<tr>
 					<td><span>*</span> Enter Course Fees :</td>
-					<td><form:input path="fees" /></td>
+					<td><form:input path="fees" value = "${courses.fees}"/></td>
 					<td><form:errors path="fees"/></td>
 				</tr>
 
 				<tr>
 					<td><span>*</span> Enter Course Duration :</td>
-					<td><form:input path="duration" /></td>
+					<td><form:input path="duration" value = "${courses.duration}"/></td>
 					<td><form:errors path="duration"/></td>
 				</tr>
 
 				<tr>
-					<td><form:button>Save</form:button></td>
+					<td><form:button>Update</form:button></td>
 				</tr>
 
 			</table>

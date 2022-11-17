@@ -1,6 +1,7 @@
 package com.center.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,5 +21,14 @@ public class CourseService {
 	
 	public void saveData(Course course) {
 		 courseRepository.save(course);
+	}
+	
+	public void deleteData(Long courseId) {
+		courseRepository.deleteById(courseId);
+	}
+	
+	public  Course getCourseData(Long courseId) {
+		Optional<Course> result = courseRepository.findById(courseId);
+		return result.get();
 	}
 }
