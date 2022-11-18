@@ -36,7 +36,13 @@ public class CourseController {
 
 		ModelAndView mv = new ModelAndView("new_course");
 
-		mv.addObject("courses", new Course());
+		Long courseId = courseService.generatedId();
+		
+		Course course = new Course();
+		
+		course.setCourseId(courseId);
+		
+		mv.addObject("courses", course);
 
 		return mv;
 	}

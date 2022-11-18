@@ -36,13 +36,15 @@ table, td {
 				<th>ACTIONS</th>
 
 			</tr>
+			
+			
 			<c:forEach var="course" items="${courses}">
 			<tr>
-				<td>${course.courseId}</td>
+				<td>${course.courseId}</td>     
 				<td>${course.courseName}</td>
 				<td>${course.fees}</td>
 				<td>${course.duration}</td>
-				<td><a href="/edit?courseId=${course.courseId}">Edit</a> &nbsp; &nbsp; <a
+				<td><a href="/edit?courseId=${course.courseId}">Update</a> &nbsp; &nbsp; <a
 					   href="/delete?courseId=${course.courseId}">Delete</a></td>
 			</tr>
 			</c:forEach>

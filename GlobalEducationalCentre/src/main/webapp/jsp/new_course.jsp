@@ -26,9 +26,9 @@ span {
 			<table border="0">
 
 				<tr>
-					<td><span>*</span> Enter course number :</td>
-					<td><form:input path="courseId" value="${courses.courseId}"/></td>
-					<td><form:errors path="courseId"/></td>
+					<td> Enter course number :</td>
+					<td><form:input path="courseId" value="${courses.courseId}" readonly="true"/></td>
+					
 				</tr>
 
 				<tr>

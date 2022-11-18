@@ -12,7 +12,6 @@ import lombok.Data;
 public class Course {
 	
 	@Id
-	@NotNull(message = "enter valid courseId")
 	private Long courseId;
 	
 	@NotEmpty(message = "enter valid courseName")
